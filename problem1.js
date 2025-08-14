@@ -1,5 +1,5 @@
 function totalFine(price) {
-  if (price <= 0) {
+  if (price <= 0 || typeof price !== "number") {
     return "Invalid";
   }
   const extraServiceCharge = 30;
