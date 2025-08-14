@@ -17,10 +17,9 @@ function onlyCharacters(str) {
     return "Invalid";
   }
   let result = str.split(" ").join("").toUpperCase();
-  //   console.log(typeof result);
   return result;
 }
-// console.log(onlyCharacters(false));
+// console.log(onlyCharacters("I want to be part of something big"));
 
 //Problem - 3 ----->
 function bestTeam(teamOne, teamTwo) {
@@ -42,11 +41,11 @@ function bestTeam(teamOne, teamTwo) {
   }
 }
 
-// let result = bestTeam(
+// let result1 = bestTeam(
 //   { name: "Brazil", foul: 5, cardY: 1, cardR: 0 },
 //   { name: "Argentina", foul: 7, cardY: 0, cardR: 0 }
 // );
-// console.log(result);
+// console.log(result1);
 
 // Problem - 4 --->
 function isSame(arrayOne, arraytwo) {
@@ -70,7 +69,7 @@ function isSame(arrayOne, arraytwo) {
   }
 }
 
-console.log(isSame([1, undefined, 3], [1, null, 3]));
+// console.log(isSame([1, undefined, 3], [1, null, 3]));
 
 // Problem - 5 ---------->
 
@@ -99,4 +98,4 @@ function resultReport(marks) {
   };
   return result;
 }
-console.log(resultReport(99));
+// console.log(resultReport(99));
