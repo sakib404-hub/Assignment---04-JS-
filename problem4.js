@@ -4,8 +4,8 @@ function isSame(arrayOne, arraytwo) {
   }
   const lengthOne = arrayOne.length;
   const lengthtwo = arraytwo.length;
-  console.log(lengthOne);
-  console.log(lengthtwo);
+  //   console.log(lengthOne);
+  //   console.log(lengthtwo);
 
   if (lengthOne === lengthtwo) {
     for (let i = 0; i < lengthOne; i++) {
@@ -20,6 +20,3 @@ function isSame(arrayOne, arraytwo) {
 }
 
 console.log(isSame([1, undefined, 3], [1, null, 3]));
-
-let number = undefined;
-console.log(typeof number);

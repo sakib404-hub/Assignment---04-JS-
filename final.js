@@ -11,7 +11,7 @@ function totalFine(price) {
 // let result = totalFine(552);
 // console.log(result);
 
-//Problem - 2
+//Problem - 2 ------>
 function onlyCharacters(str) {
   if (typeof str !== "string") {
     return "Invalid";
@@ -22,7 +22,7 @@ function onlyCharacters(str) {
 }
 // console.log(onlyCharacters(false));
 
-//Problem - 3
+//Problem - 3 ----->
 function bestTeam(teamOne, teamTwo) {
   if (typeof teamOne !== "object" || typeof teamTwo !== "object") {
     return "Invalid";
@@ -47,3 +47,56 @@ function bestTeam(teamOne, teamTwo) {
 //   { name: "Argentina", foul: 7, cardY: 0, cardR: 0 }
 // );
 // console.log(result);
+
+// Problem - 4 --->
+function isSame(arrayOne, arraytwo) {
+  if (!Array.isArray(arrayOne) || !Array.isArray(arraytwo)) {
+    return "Invalid";
+  }
+  const lengthOne = arrayOne.length;
+  const lengthtwo = arraytwo.length;
+  //   console.log(lengthOne);
+  //   console.log(lengthtwo);
+
+  if (lengthOne === lengthtwo) {
+    for (let i = 0; i < lengthOne; i++) {
+      if (arrayOne[i] !== arraytwo[i]) {
+        return false;
+      }
+    }
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(isSame([1, undefined, 3], [1, null, 3]));
+
+// Problem - 5 ---------->
+
+function resultReport(marks) {
+  if (!Array.isArray(marks)) {
+    return "Invalid";
+  }
+  let sum = 0;
+  const length = marks.length;
+  console.log(length);
+  let pass = 0;
+  let fail = 0;
+  for (let mark of marks) {
+    sum += mark;
+    if (mark >= 40) {
+      pass++;
+    } else {
+      fail++;
+    }
+  }
+  const avg = parseInt(sum / length);
+  const result = {
+    finalScore: avg,
+    pass: pass,
+    fail: fail,
+  };
+  return result;
+}
+console.log(resultReport(99));
