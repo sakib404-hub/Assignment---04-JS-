@@ -1,19 +1,15 @@
-function bestTeam(teamOne, teamTwo) {
-  if (typeof teamOne !== "object" || typeof teamTwo !== "object") {
+function bestTeam(player1, player2) {
+  if (typeof player1 !== "object" || typeof player2 !== "object") {
     return "Invalid";
   }
-  //   console.log(teamOne);
-  //   console.log(teamTwo);
-  const teamOneFairPlay = teamOne.foul + teamOne.cardY + teamOne.cardR;
-  const teamtwoFairPlay = teamTwo.foul + teamTwo.cardY + teamTwo.cardR;
-  //   console.log(teamOneFairPlay);
-  //   console.log(teamtwoFairPlay);
-  if (teamOneFairPlay === teamtwoFairPlay) {
+  const player1FairPlay = player1.foul + player1.cardY + player1.cardR;
+  const player2FairPlay = player2.foul + player2.cardY + player2.cardR;
+  if (player1FairPlay === player2FairPlay) {
     return "Tie";
-  } else if (teamOneFairPlay < teamtwoFairPlay) {
-    return teamOne.name;
+  } else if (player1FairPlay < player2FairPlay) {
+    return player1.name;
   } else {
-    return teamTwo.name;
+    return player2.name;
   }
 }
 

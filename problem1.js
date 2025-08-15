@@ -1,9 +1,9 @@
-function totalFine(price) {
-  if (price <= 0 || typeof price !== "number") {
+function totalFine(fare) {
+  if (fare <= 0 || typeof fare !== "number") {
     return "Invalid";
   }
   const extraServiceCharge = 30;
-  const total = price + price * 0.2 + extraServiceCharge;
+  const total = fare + fare * 0.2 + extraServiceCharge;
   return total;
 }
 

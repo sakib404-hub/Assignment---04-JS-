@@ -1,15 +1,15 @@
-function isSame(arrayOne, arraytwo) {
-  if (!Array.isArray(arrayOne) || !Array.isArray(arraytwo)) {
+function isSame(arr1, arr2) {
+  if (!Array.isArray(arr1) || !Array.isArray(arr2)) {
     return "Invalid";
   }
-  const lengthOne = arrayOne.length;
-  const lengthtwo = arraytwo.length;
+  const lengthOne = arr1.length;
+  const lengthtwo = arr2.length;
   //   console.log(lengthOne);
   //   console.log(lengthtwo);
 
   if (lengthOne === lengthtwo) {
     for (let i = 0; i < lengthOne; i++) {
-      if (arrayOne[i] !== arraytwo[i]) {
+      if (arr1[i] !== arr2[i]) {
         return false;
       }
     }

@@ -1,10 +1,10 @@
 // Problem - 1
-function totalFine(price) {
-  if (price <= 0 || typeof price !== "number") {
+function totalFine(fare) {
+  if (fare <= 0 || typeof fare !== "number") {
     return "Invalid";
   }
   const extraServiceCharge = 30;
-  const total = price + price * 0.2 + extraServiceCharge;
+  const total = fare + fare * 0.2 + extraServiceCharge;
   return total;
 }
 
@@ -18,32 +18,34 @@ function onlyCharacter(str) {
 }
 
 //Problem - 3 ----->
-function bestTeam(teamOne, teamTwo) {
-  if (typeof teamOne !== "object" || typeof teamTwo !== "object") {
+function bestTeam(player1, player2) {
+  if (typeof player1 !== "object" || typeof player2 !== "object") {
     return "Invalid";
   }
-  const teamOneFairPlay = teamOne.foul + teamOne.cardY + teamOne.cardR;
-  const teamtwoFairPlay = teamTwo.foul + teamTwo.cardY + teamTwo.cardR;
-  if (teamOneFairPlay === teamtwoFairPlay) {
+  const player1FairPlay = player1.foul + player1.cardY + player1.cardR;
+  const player2FairPlay = player2.foul + player2.cardY + player2.cardR;
+  if (player1FairPlay === player2FairPlay) {
     return "Tie";
-  } else if (teamOneFairPlay < teamtwoFairPlay) {
-    return teamOne.name;
+  } else if (player1FairPlay < player2FairPlay) {
+    return player1.name;
   } else {
-    return teamTwo.name;
+    return player2.name;
   }
 }
 
 // Problem - 4 --->
-function isSame(arrayOne, arraytwo) {
-  if (!Array.isArray(arrayOne) || !Array.isArray(arraytwo)) {
+function isSame(arr1, arr2) {
+  if (!Array.isArray(arr1) || !Array.isArray(arr2)) {
     return "Invalid";
   }
-  const lengthOne = arrayOne.length;
-  const lengthtwo = arraytwo.length;
+  const lengthOne = arr1.length;
+  const lengthtwo = arr2.length;
+  //   console.log(lengthOne);
+  //   console.log(lengthtwo);
 
   if (lengthOne === lengthtwo) {
     for (let i = 0; i < lengthOne; i++) {
-      if (arrayOne[i] !== arraytwo[i]) {
+      if (arr1[i] !== arr2[i]) {
         return false;
       }
     }
@@ -88,4 +90,3 @@ function resultReport(marks) {
     return result;
   }
 }
-// console.log(resultReport(99));
